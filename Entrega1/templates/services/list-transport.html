@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Listado de servicios de transporte
+
+{%endblock%}
+
+{% block content %}
+<h1>Hola desde el template de listado de servicios de transporte </h1>
+<h2>Solicitar un nuevo transporte</h2> <a href="/services/create-transport" class="btn btn-primary">Crear</a>
+
+
+
+
+{% for transport in transports %}
+
+
+<div class="card" style="width: 18rem;"> -->
+    <img src="https://velotax.com.co/wp-content/uploads/2020/07/aerovans-paisaje-1.jpg"
+        class="card-img-top" alt="...">
+    
+    <div class="card-body">
+        <h5 class="card-title">{{transport.type}}</h5>
+        <p class="card-text">Su precio es ${{transport.price}} </p>
+        <a href="#" class="btn btn-primary">Reservar</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

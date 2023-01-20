@@ -34,7 +34,6 @@ def create_room(request):
 
 
 def list_rooms(request):
-    # print('listing rooms', request.GET)
     if 'search' in request.GET:
         search = request.GET['search']
         rooms = Rooms.objects.filter(name__contains = search)

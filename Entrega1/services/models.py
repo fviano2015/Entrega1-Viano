@@ -7,7 +7,21 @@ class Transport(models.Model):
     price = models.FloatField()
 
     def __str__(self):
-        return self.name
+        return self.type
     class Meta:
         verbose_name = 'Transporte'
         verbose_name_plural = 'Transportes'
+
+
+class Activities(models.Model):
+    name = models.CharField(max_length = 50)
+    time = models.FloatField()
+    price = models.FloatField()
+
+    def __str__(self):
+        return self.name
+    class Meta:
+        verbose_name = 'Actividad'
+        verbose_name_plural = 'Actividades'
+
+
